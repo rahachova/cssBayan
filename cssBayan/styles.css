@@ -1,6 +1,9 @@
 body {
     padding: 0 31rem;
     font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: antiquewhite;
 }
 
 ul {
@@ -9,12 +12,56 @@ ul {
     margin: 0;
 }
 
+ul:hover label,
+input:checked ~ label {
+    color: black;
+}
+
+
 li {
     border-top: 0.1rem solid lightgray;
 }
 
+label {
+    display: block;
+    position: relative;
+    min-height: 4rem;
+    color: rgb(0, 26, 255);
+    cursor: pointer;
+}
+
+li:active label{
+    color: rgb(35, 199, 217);
+}
+
+label::after {
+    font-size: 3rem;
+}
+
+ul:hover label::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+input:checked ~ label::after {
+    transform: rotate(45deg);
+}
+
 img {
     display: block;
-    height: 20rem;
+    height: 0;
     width: auto;
+    transition: all 0.5s;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+input:checked ~ label img {
+    height: 20rem;
 }

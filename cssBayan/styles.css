@@ -1,21 +1,8 @@
-@media (min-width: 820px) {
-    body {
-        padding: 0 15%;
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 1920px) {
-    body {
-        padding: 0 25%;
-        font-size: 1.8rem;
-    }
-}
-
 body {
     font-family: cursive;
     font-weight: bold;
     margin: 0;
+    padding: 0 0.5rem;
     background-color: rgb(244, 248, 235);
     min-width: 12rem;
     overflow-y: scroll;
@@ -97,5 +84,19 @@ input:checked ~ label img {
     label:hover img {
         padding-bottom: 1rem;
         max-height: 20rem;
+    }
+}
+
+@media (min-width: 820px) {
+    body {
+        padding: 0 15%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        padding: 0 25%;
+        font-size: 1.8rem;
     }
 }

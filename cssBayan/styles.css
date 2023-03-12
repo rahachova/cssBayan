@@ -1,0 +1,102 @@
+body {
+    font-family: cursive;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0.5rem;
+    background-color: rgb(244, 248, 235);
+    min-width: 12rem;
+    overflow-y: scroll;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul:hover label,
+input:checked ~ label {
+    color: black;
+}
+
+li {
+    border-top: 0.1rem solid lightgray;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 4rem;
+}
+
+li:active label{
+    color: rgb(35, 199, 217);
+}
+
+label span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+label span span {
+    font-size: 1.5em;
+    transition: all 0.2s;
+}
+
+input:checked ~ label span span {
+    transform: rotate(45deg);
+}
+
+img {
+    align-self: center;
+    height: auto;
+    max-width: 100%;
+    max-height: 0;
+    transition: all 0.5s;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ label img {
+    padding-bottom: 1rem;
+    max-height: 20rem;
+}
+
+@media (hover: hover) {
+    label {
+        color: rgb(0, 26, 255);
+        cursor: pointer;
+    }
+
+    ul span span {
+        display: none;
+    }
+
+    ul:hover span span {
+        display: flex;
+    }
+
+    label:hover img {
+        padding-bottom: 1rem;
+        max-height: 20rem;
+    }
+}
+
+@media (min-width: 820px) {
+    body {
+        padding: 0 15%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        padding: 0 25%;
+        font-size: 1.8rem;
+    }
+}

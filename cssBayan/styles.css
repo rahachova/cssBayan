@@ -17,7 +17,8 @@ body {
     font-weight: bold;
     margin: 0;
     background-color: rgb(244, 248, 235);
-    min-width: 200px;
+    min-width: 12rem;
+    overflow-y: scroll;
 }
 
 ul {
@@ -53,13 +54,12 @@ label span {
     height: 3rem;
 }
 
-label span::after {
-    content: url(./pics/plus-solid.svg);
-    width: 1.5rem;
+label span span {
+    font-size: 1.5em;
     transition: all 0.2s;
 }
 
-input:checked ~ label span::after {
+input:checked ~ label span span {
     transform: rotate(45deg);
 }
 
@@ -72,9 +72,7 @@ img {
 }
 
 input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
+    display: none;
 }
 
 input:checked ~ label img {
@@ -88,12 +86,12 @@ input:checked ~ label img {
         cursor: pointer;
     }
 
-    ul span::after {
-        content: none;
+    ul span span {
+        display: none;
     }
 
-    ul:hover span::after {
-        content: url(./pics/plus-solid.svg);
+    ul:hover span span {
+        display: flex;
     }
 
     label:hover img {
